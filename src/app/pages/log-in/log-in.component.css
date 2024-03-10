@@ -1,0 +1,68 @@
+
+
+.img-fluid{
+    top:50%
+}
+
+.col-md-6{
+    color:black
+}
+
+.camel h1{
+
+  color: aliceblue;
+  font-size: 30px;
+  position: absolute;
+  left: 45%;
+  top: 50%;
+  font: 100;
+}
+
+.camel a{
+  color: black;
+  font-size: 20px;
+  position: absolute;
+  left: 45%;
+  top: 55%;
+
+
+}
+
+
+.camel p{
+  color: aliceblue;
+  font-size: 20px;
+  position: absolute;
+  left: 50%;
+  top: 55%;
+}
+
+.camel active-link
+{
+  font-weight: bold;
+  color:var(--secondary-color);
+  text-decoration:line-through;
+}
+
+/* Estilos para el botón */
+button.underline-btn {
+    background: none;
+
+    border: none;
+    padding: 0;
+    font: inherit;
+    text-decoration: underline;
+    cursor: pointer;
+    color: grey; /* Puedes ajustar el color del texto según tus preferencias */
+    display: inline-block; /* Use inline-block to center horizontally */
+    margin: 0 auto; /* Auto margin for horizontal centering */
+  }
+
+  .container {
+    text-align: center;
+  }
+  
+  .btn.btn-primary {
+    background-color: #55AEAB;
+    /* Add other styles as needed */
+}

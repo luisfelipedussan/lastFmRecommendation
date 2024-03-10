@@ -1,0 +1,27 @@
+.active-link
+{
+  font-weight: bold;
+  color:var(--secondary-color);
+  text-decoration:line-through;
+}
+
+/* Add this to your CSS file or style block */
+.bg-black {
+    background-color: black !important; /* Use !important to override Bootstrap styles */
+  }
+  
+  /* Customize the text color if needed */
+  .navbar-dark .navbar-nav .nav-link {
+    color: white;
+  }
+  
+
+  /* Add this to your CSS file or style block */
+.navbar-brand img {
+    max-height: 100px; /* Adjust the max-height as needed */
+  }
+  
+  .navbar-nav {
+    margin-top: 30px; /* Adjust the margin-top as needed */
+  }
+  
