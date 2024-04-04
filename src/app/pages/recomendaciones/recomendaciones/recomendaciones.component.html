@@ -41,36 +41,10 @@
 </head>
 <body>
     <div class="container">
-        <!-- Contenido de tu página va aquí -->
-
         <h1>Nuestra Selección Para Ti:</h1>
-
-        <div class="songItem">
-            <span class="songTitle">Canción Recomendada 1</span>
+        <div *ngFor="let artista of artistas" class="songItem">
+          <span class="songTitle">{{ artista.nombre }}</span>
         </div>
-
-        <div class="songItem">
-            <span class="songTitle">Canción Recomendada 2</span>
-        </div>
-
-        <div class="songItem">
-            <span class="songTitle">Canción Recomendada 3</span>
-        </div>
-
-        <div class="songItem">
-            <span class="songTitle">Canción Recomendada 4</span>
-        </div>
-
-        <div class="songItem">
-            <span class="songTitle">Canción Recomendada 5</span>
-        </div>
-
-        <div class="songItem">
-            <span class="songTitle">Canción Recomendada 6</span>
-        </div>
-
-        <!-- Puedes agregar más elementos songItem según sea necesario -->
-
-    </div>
+      </div>      
 </body>
 

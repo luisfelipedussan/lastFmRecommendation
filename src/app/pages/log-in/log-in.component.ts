@@ -3,22 +3,23 @@ import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-log-in',
-  standalone: true,
-  imports: [],
   templateUrl: './log-in.component.html',
-  styleUrl: './log-in.component.css'
+  styleUrls: ['./log-in.component.css']
 })
 export class LogInComponent {
-
   constructor(private router: Router) { }
 
-    redirigirARecomendaciones() {
-      this.router.navigate(['/recomendaciones']);
-    }
+  ingresar() {
+    const username = (document.getElementById("usernameInput") as HTMLInputElement).value;
+    this.redirigirARecomendaciones(username);
+  }
 
-    redirigirACrearUsuario() {
-      this.router.navigate(['/CreateUser']);
-    }
+  redirigirARecomendaciones(username: string) {
+    this.router.navigate(['/recomendaciones'], { queryParams: { usuario: username } });
+  }
 
-
+  redirigirACrearUsuario() {
+    this.router.navigate(['/CreateUser']);
+  }
 }
+

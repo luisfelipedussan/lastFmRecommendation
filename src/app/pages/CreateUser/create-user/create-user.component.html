@@ -55,7 +55,7 @@
     <input type="text" class=" form-control" id="usernameInput" placeholder="Nombre de usuario">
 
     <h1 id="feedbackText">Para mejorar tu experiencia
-        , selecciona las canciones que te gustan de este grupo: </h1>
+        , selecciona artistas que te gusten de este grupo: </h1>
 
         <div class="container">
             <!-- Contenido de tu página va aquí -->
@@ -88,8 +88,39 @@
             <!-- Puedes agregar más elementos songItem según sea necesario -->
 
             
-        <button type=" button"  class="btn btn-primary align-items-center">Crear Usuario</button>
-    
+            <button id="crearUsuarioButton" class="btn btn-primary align-items-center">Crear Usuario</button>
         </div>
 </body>
 
+<script>
+    document.getElementById('crearUsuarioButton').addEventListener('click', function() {
+        var artistasSeleccionadas = document.querySelectorAll('.songItem.selected');
+
+        artistasSeleccionadas.forEach(function(artista) {
+            var nombreArtista = artista.dataset.nombreArtista;
+            var nombreUsuario = document.getElementById('usernameInput').value;
+
+            // Realizar la petición POST
+            fetch('localhost//gusto', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    usuario: nombreUsuario,
+                    artista: nombreArtista
+                })
+            })
+            .then(function(response) {
+                if (response.ok) {
+                    console.log('Petición POST exitosa para el artista:', nombreArtista);
+                } else {
+                    console.error('Error en la petición POST para la canción:', nombreArtista);
+                }
+            })
+            .catch(function(error) {
+                console.error('Error en la petición POST para la canción:', nombreArtista, error);
+            });
+        });
+    });
+</script>

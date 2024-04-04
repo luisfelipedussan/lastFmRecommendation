@@ -1,37 +1,37 @@
 <div class="container">
-    <div class="row">
-      <!-- Image column with offset -->
-      <div class="col-md-6 offset-md-3">
-        <!-- Add your image here -->
-        <img src="../../../assets/logoWhite.png" alt="Your Image" class="img-fluid">
-      </div>
-  
-      <div class="container">
-        <div class="row justify-content-center align-items-center" style="min-height: 40vh;">
-          <!-- Centered column -->
-          <div class="col-md-6 mt-4">
-            <div class="content">
-              <form>
-                <!-- Your form content here -->
-                <div class="form-group">
-                <label><strong>username</strong></label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ingresa Usuario">
-                  <small id="UserNameHelp" class="form-text text-muted">Tu usuario es unico.</small>
-                </div>
-      
+  <div class="row">
+    <!-- Image column with offset -->
+    <div class="col-md-6 offset-md-3">
+      <!-- Add your image here -->
+      <img src="../../../assets/logoWhite.png" alt="Your Image" class="img-fluid">
+    </div>
+
+    <div class="container">
+      <div class="row justify-content-center align-items-center" style="min-height: 40vh;">
+        <!-- Centered column -->
+        <div class="col-md-6 mt-4">
+          <div class="content">
+            <form id="loginForm" onsubmit="return false;">
+              <!-- Your form content here -->
+              <div class="form-group">
+              <label><strong>username</strong></label>
+                <input type="text" class="form-control" id="usernameInput" aria-describedby="emailHelp" placeholder="Ingresa Usuario">
+                <small id="UserNameHelp" class="form-text text-muted">Tu usuario es único.</small>
+              </div>
+    
+            
+              <button type="button" class="btn btn-primary align-items-center" (click)="ingresar()">Ingresa</button>
+
+
               
-                <button type="button" (click)="redirigirARecomendaciones()" class="btn btn-primary align-items-center">Ingresa</button>
-
-
-                
-              </form>
-            </div>
-            <button type=" button" (click)="redirigirACrearUsuario()" class="underline-btn ">Crear Usuario</button>
+            </form>
           </div>
+          <button type="button" class="underline-btn" (click)="redirigirACrearUsuario()">Crear Usuario</button>
         </div>
       </div>
-      
-      
     </div>
+    
+    
   </div>
-  
+</div>
+
